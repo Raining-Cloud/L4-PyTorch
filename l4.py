@@ -51,7 +51,6 @@ class L4Optim(torch.optim.Optimizer):
             beta (float, optional): The momentum term factor for the gradient estimation. Default is 0.9.
             method (str, optional): The method used for calculating the denominator; must be either "dot", "cossim", "clamp". Default is "dot".
             k (int, optional): Only used if method is set to cossim, sets the exponent. Default is 4.
-            lr_beta (float, optional): The momentum parameter for updating the learning rate. Default is 0.
         Raises:
             ValueError: If the base optimizer is an instance of L4Optim or if the method is not one of "dot" or "cossim".
         This constructor also initializes the optimizer's state dictionary by storing the hyperparameters,
